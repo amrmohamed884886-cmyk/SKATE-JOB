@@ -707,7 +707,7 @@ p {
   font-size: 9px;
 }
 
-.instagram-link {
+.developer-credit a {   display: inline-flex;   align-items: center;   gap: 4px;   color: var(--ink); }  .developer-credit a:hover {   color: var(--orange); }  .developer-credit svg {   width: 13px;   height: 13px;   flex: 0 0 auto; }  .instagram-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
