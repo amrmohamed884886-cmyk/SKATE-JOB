@@ -1,11 +1,11 @@
 :root {
-  color-scheme: light;
-  --paper: #f5f4ef;
-  --ink: #171918;
-  --muted: #747772;
-  --line: #deded7;
-  --lime: #d7ff3f;
-  --orange: #ff6038;
+  color-scheme: dark;
+  --paper: #050505;
+  --ink: #ffffff;
+  --muted: #ffffff;
+  --line: #353535;
+  --lime: #ed2929;
+  --orange: #ed2929;
   --display: "Barlow Condensed", Impact, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
 }
@@ -49,7 +49,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(23, 25, 24, 0.08);
+  border-bottom: 1px solid var(--line);
   position: relative;
   z-index: 5;
 }
@@ -68,9 +68,10 @@ button:focus-visible {
   width: 34px;
   height: 34px;
   place-items: center;
-  background: var(--ink);
+  background: #151515;
+  border: 1px solid var(--line);
   border-radius: 50%;
-  color: var(--paper);
+  color: #fff;
   font-family: var(--display);
   font-size: 17px;
   font-weight: 900;
@@ -156,7 +157,7 @@ button:focus-visible {
   height: 8px;
   border-radius: 50%;
   background: var(--orange);
-  box-shadow: 0 0 0 4px rgba(255, 96, 56, 0.13);
+  box-shadow: 0 0 0 4px rgba(237, 41, 41, 0.2);
 }
 
 h1,
@@ -188,7 +189,7 @@ p {
 .hero-description {
   max-width: 385px;
   margin: 27px 0 0;
-  color: #5e625d;
+  color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -219,7 +220,8 @@ p {
 }
 
 .button-dark {
-  background: var(--ink);
+  background: #191919;
+  border-color: #191919;
   color: white;
 }
 
@@ -308,6 +310,7 @@ p {
   justify-content: center;
   border-radius: 50%;
   background: var(--lime);
+  color: #fff;
   text-align: center;
   transform: rotate(9deg);
 }
@@ -358,6 +361,7 @@ p {
   overflow: hidden;
   padding: 17px 0 16px;
   background: var(--lime);
+  color: #fff;
 }
 
 .ticker-track {
@@ -433,12 +437,12 @@ p {
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(23, 25, 24, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
 
 .service-card-featured {
-  border-color: var(--ink);
-  background: var(--ink);
+  border-color: #191919;
+  background: #191919;
   color: white;
 }
 
@@ -479,7 +483,7 @@ p {
 }
 
 .service-icon-skate {
-  color: #7a8c64;
+  color: var(--orange);
 }
 
 .service-card h3 {
@@ -501,7 +505,7 @@ p {
 }
 
 .service-card-featured p {
-  color: #b9bdb7;
+  color: #fff;
 }
 
 .text-link {
@@ -524,7 +528,7 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: var(--ink);
+  background: #111111;
   color: white;
 }
 
@@ -533,7 +537,7 @@ p {
   min-height: 484px;
   background-color: #37465b;
   background-image:
-    linear-gradient(90deg, transparent 70%, var(--ink) 100%),
+    linear-gradient(90deg, transparent 70%, #111111 100%),
     url("https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Aggressive_inline%281%29.jpg/1280px-Aggressive_inline%281%29.jpg");
   background-position: center, center 56%;
   background-size: cover;
@@ -565,7 +569,7 @@ p {
 .about-copy > p:not(.eyebrow) {
   max-width: 370px;
   margin: 22px 0 23px;
-  color: #c1c4be;
+  color: #fff;
   font-size: 11px;
   line-height: 1.9;
 }
@@ -606,7 +610,7 @@ p {
   position: absolute;
   top: -50px;
   right: 6%;
-  color: rgba(23, 25, 24, 0.035);
+  color: rgba(255, 255, 255, 0.035);
   font-family: var(--display);
   font-size: 330px;
   font-weight: 900;
@@ -656,9 +660,9 @@ p {
   gap: 9px;
   margin-top: 20px;
   padding: 11px 15px;
-  border: 1px solid #24a866;
+  border: 1px solid var(--orange);
   border-radius: 3px;
-  color: #16834b;
+  color: var(--ink);
   font-size: 11px;
   font-weight: 700;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
@@ -666,7 +670,7 @@ p {
 
 .whatsapp-link:hover {
   transform: translateY(-2px);
-  background: #16834b;
+  background: var(--orange);
   color: white;
 }
 

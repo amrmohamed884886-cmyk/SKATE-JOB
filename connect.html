@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f4ef" />
+    <meta name="theme-color" content="#050505" />
     <meta
       name="description"
       content="Connect with Skate Job on Instagram, WhatsApp, or visit our website."
@@ -17,13 +17,13 @@
     />
     <style>
       :root {
-        color-scheme: light;
-        --paper: #f5f4ef;
-        --ink: #171918;
-        --muted: #747772;
-        --line: #deded7;
-        --lime: #d7ff3f;
-        --orange: #ff6038;
+        color-scheme: dark;
+        --paper: #050505;
+        --ink: #ffffff;
+        --muted: #ffffff;
+        --line: #353535;
+        --lime: #ed2929;
+        --orange: #ed2929;
         --display: "Barlow Condensed", Impact, sans-serif;
         --body: "DM Sans", Arial, sans-serif;
       }
@@ -39,7 +39,7 @@
         display: grid;
         place-items: center;
         background:
-          radial-gradient(circle at 88% 12%, rgba(215, 255, 63, 0.35), transparent 18rem),
+          radial-gradient(circle at 88% 12%, rgba(237, 41, 41, 0.16), transparent 18rem),
           var(--paper);
         color: var(--ink);
         font-family: var(--body);
@@ -62,8 +62,8 @@
         padding: clamp(26px, 7vw, 42px);
         border: 1px solid var(--ink);
         border-radius: 26px;
-        background: rgba(255, 255, 255, 0.78);
-        box-shadow: 9px 9px 0 var(--ink);
+        background: #111111;
+        box-shadow: 9px 9px 0 #ed2929;
       }
 
       .brand {
@@ -80,9 +80,9 @@
         height: 40px;
         display: grid;
         place-items: center;
-        border: 1px solid var(--ink);
+        border: 1px solid var(--line);
         border-radius: 13px;
-        background: var(--ink);
+        background: #050505;
         color: #fff;
         font-family: var(--display);
         font-size: 20px;
@@ -136,14 +136,15 @@
         padding: 11px 15px;
         border: 1px solid var(--line);
         border-radius: 14px;
-        background: #fff;
+        background: #1a1a1a;
         transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
       }
 
       .link-card:hover {
         transform: translateY(-2px);
         border-color: var(--ink);
-        background: var(--lime);
+        background: var(--orange);
+        color: #fff;
       }
 
       .link-icon {
@@ -153,7 +154,7 @@
         display: grid;
         place-items: center;
         border-radius: 12px;
-        background: var(--paper);
+        background: #252525;
       }
 
       .link-icon svg {
