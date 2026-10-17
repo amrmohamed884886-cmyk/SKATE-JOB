@@ -78,7 +78,7 @@ button:focus-visible {
   letter-spacing: -0.08em;
 }
 
-.wordmark-dot,
+.wordmark-mark img {   display: block;   width: 100%;   height: 100%;   object-fit: cover; }  .wordmark-dot,
 .accent-dot {
   color: var(--orange);
 }
@@ -618,7 +618,7 @@ p {
   pointer-events: none;
 }
 
-.contact .eyebrow {
+.contact-mark {   width: 330px;   height: 330px;   overflow: hidden;   border-radius: 50%;   opacity: 0.045; }  .contact-mark img {   display: block;   width: 100%;   height: 100%;   object-fit: cover; }  .contact .eyebrow {
   margin-bottom: 17px;
 }
 
