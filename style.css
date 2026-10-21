@@ -68,17 +68,21 @@ button:focus-visible {
   width: 34px;
   height: 34px;
   place-items: center;
+  overflow: hidden;
   background: #151515;
   border: 1px solid var(--line);
   border-radius: 50%;
-  color: #fff;
-  font-family: var(--display);
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: -0.08em;
+  flex-shrink: 0;
 }
 
-.wordmark-mark img {   display: block;   width: 100%;   height: 100%;   object-fit: cover; }  .wordmark-dot,
+.wordmark-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wordmark-dot,
 .accent-dot {
   color: var(--orange);
 }
@@ -610,15 +614,22 @@ p {
   position: absolute;
   top: -50px;
   right: 6%;
-  color: rgba(255, 255, 255, 0.035);
-  font-family: var(--display);
-  font-size: 330px;
-  font-weight: 900;
-  line-height: 1;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 0.045;
   pointer-events: none;
 }
 
-.contact-mark {   width: 330px;   height: 330px;   overflow: hidden;   border-radius: 50%;   opacity: 0.045; }  .contact-mark img {   display: block;   width: 100%;   height: 100%;   object-fit: cover; }  .contact .eyebrow {
+.contact-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact .eyebrow {
   margin-bottom: 17px;
 }
 
@@ -701,7 +712,6 @@ p {
 .footer-wordmark .wordmark-mark {
   width: 29px;
   height: 29px;
-  font-size: 14px;
 }
 
 .site-footer p,
@@ -1077,5 +1087,365 @@ p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+:root {
+  --lime: #ffffff;
+  --orange: #ffffff;
+  --line: #454545;
+}
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 100svh;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+}
+
+.wordmark {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+
+.brand-logo {
+  display: block;
+  width: 94px;
+  height: 94px;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.55));
+}
+
+.site-header .site-navigation {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: clamp(16px, 2vw, 23px);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.site-navigation > a:not(.nav-contact) {
+  padding: 4px 8px;
+  transition: opacity 180ms ease, letter-spacing 180ms ease;
+}
+
+.site-navigation > a:not(.nav-contact):hover {
+  opacity: 1;
+  letter-spacing: 0.22em;
+}
+
+.site-navigation .nav-contact {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 0;
+  transition: opacity 180ms ease, letter-spacing 180ms ease;
+}
+
+.site-navigation .nav-contact:hover {
+  color: white;
+  background: transparent;
+  opacity: 0.65;
+  letter-spacing: 0.22em;
+}
+
+.menu-toggle {
+  display: none !important;
+}
+
+.hero {
+  position: relative;
+  display: block;
+  height: 100svh;
+  min-height: 680px;
+  padding: 0;
+  overflow: hidden;
+  background: #101010;
+}
+
+.hero-visual {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  align-self: stretch;
+  min-height: 0;
+  height: auto;
+  background: #101010;
+}
+
+.hero-photo {
+  filter: grayscale(1) brightness(0.72) contrast(1.08);
+}
+
+.photo-overlay {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.48), transparent 30%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.78)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 75%);
+}
+
+.hero-copy {
+  position: absolute;
+  z-index: 1;
+  right: auto;
+  bottom: 72px;
+  left: 50%;
+  width: min(88%, 760px);
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.hero .eyebrow,
+.hero-note,
+.hero-index,
+.hero-stamp,
+.hero-scribble,
+.photo-caption {
+  display: none;
+}
+
+.hero h1 {
+  font-size: clamp(54px, 8.5vw, 112px);
+  letter-spacing: 0.015em;
+  line-height: 0.9;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 span {
+  color: white;
+}
+
+.hero-description {
+  max-width: 570px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-actions {
+  margin-top: 18px;
+}
+
+.button-dark,
+.button-light {
+  border-color: white;
+  background: white;
+  color: #080808;
+}
+
+.button-dark:hover,
+.button-light:hover {
+  border-color: white;
+  background: transparent;
+  color: white;
+}
+
+.hero-socials {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero-socials a {
+  padding: 8px;
+  transition: opacity 160ms ease;
+}
+
+.hero-socials a:hover {
+  opacity: 0.6;
+}
+
+.hero-visual > .photo-credit {
+  bottom: 30px;
+  left: 20px;
+}
+
+.ticker {
+  border-block: 1px solid var(--line);
+  background: #111111;
+  color: white;
+}
+
+.ticker-star {
+  color: #a7a7a7;
+}
+
+.service-card,
+.service-card-featured {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--ink);
+}
+
+.service-card:hover {
+  box-shadow: none;
+}
+
+.service-card-top span:last-child,
+.service-icon-promo,
+.service-icon-spark,
+.service-icon-skate,
+.text-link span {
+  color: #b8b8b8;
+}
+
+.about {
+  background: #111111;
+}
+
+.about-image {
+  filter: grayscale(1);
+}
+
+.about-copy .eyebrow,
+.about h2 span {
+  color: white;
+}
+
+.contact-mark {
+  opacity: 0.08;
+}
+
+.contact-phone {
+  text-decoration-color: white;
+}
+
+.whatsapp-link {
+  border-color: #777777;
+}
+
+.whatsapp-link:hover {
+  border-color: white;
+  background: white;
+  color: #080808;
+}
+
+.instagram-link:hover,
+.developer-credit a:hover,
+.contact-phone:hover {
+  color: #b8b8b8;
+}
+
+.footer-wordmark .brand-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.site-footer {
+  justify-content: center;
+  gap: clamp(18px, 4vw, 56px);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    height: 100svh;
+    padding: 0;
+  }
+
+  .hero {
+    min-height: 660px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    height: 100svh;
+  }
+
+  .brand-logo {
+    width: 82px;
+    height: 82px;
+  }
+
+  .site-header .site-navigation {
+    top: 38%;
+    gap: 13px;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .site-header .site-navigation > a:not(.nav-contact) {
+    padding: 4px 8px;
+    border: 0;
+  }
+
+  .site-header .site-navigation .nav-contact {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .hero {
+    min-height: 640px;
+    padding: 0;
+  }
+
+  .hero-copy {
+    bottom: 82px;
+    width: 88%;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 76px);
+  }
+
+  .hero-description {
+    max-width: 380px;
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .hero-actions {
+    margin-top: 14px;
+  }
+
+  .hero-socials {
+    bottom: 16px;
+    gap: 18px;
+  }
+
+  .hero-visual > .photo-credit {
+    bottom: 54px;
+    left: 12px;
+  }
+
+  .contact-mark {
+    width: 250px;
+    height: 250px;
+  }
+
+  .footer-wordmark .brand-logo {
+    width: 40px;
+    height: 40px;
   }
 }
