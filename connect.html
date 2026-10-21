@@ -75,18 +75,14 @@
         letter-spacing: -0.07em;
       }
 
-      .brand-mark {         object-fit: cover;
+      .brand-mark {
         width: 40px;
         height: 40px;
-        display: grid;
-        place-items: center;
+        display: block;
         border: 1px solid var(--line);
         border-radius: 13px;
         background: #050505;
-        color: #fff;
-        font-family: var(--display);
-        font-size: 20px;
-        font-weight: 900;
+        object-fit: cover;
       }
 
       .eyebrow {
@@ -181,6 +177,11 @@
         margin-left: auto;
         font-size: 19px;
         font-weight: 700;
+        transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .link-card:hover .arrow {
+        transform: translate(3px, -2px);
       }
 
       .footer {
@@ -211,11 +212,102 @@
         flex: 0 0 auto;
       }
 
+      @media (prefers-reduced-motion: no-preference) {
+        .connect-card {
+          animation: card-arrive 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .connect-card > .brand,
+        .connect-card > .eyebrow,
+        .connect-card > h1,
+        .connect-card > .intro,
+        .connect-card > .links,
+        .connect-card > .footer {
+          opacity: 0;
+          animation: content-arrive 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .connect-card > .brand {
+          animation-delay: 100ms;
+        }
+
+        .connect-card > .eyebrow {
+          animation-delay: 180ms;
+        }
+
+        .connect-card > h1 {
+          animation-delay: 240ms;
+        }
+
+        .connect-card > .intro {
+          animation-delay: 300ms;
+        }
+
+        .links .link-card {
+          opacity: 0;
+          animation: link-reveal 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .links .link-card:nth-child(1) {
+          animation-delay: 380ms;
+        }
+
+        .links .link-card:nth-child(2) {
+          animation-delay: 460ms;
+        }
+
+        .links .link-card:nth-child(3) {
+          animation-delay: 540ms;
+        }
+
+        .connect-card > .footer {
+          animation-delay: 620ms;
+        }
+      }
+
+      @keyframes card-arrive {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes content-arrive {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes link-reveal {
+        from {
+          opacity: 0;
+          clip-path: inset(0 0 100% 0);
+        }
+
+        to {
+          opacity: 1;
+          clip-path: inset(0);
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
         *::after {
           scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
       }
