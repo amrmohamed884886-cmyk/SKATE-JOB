@@ -4,8 +4,8 @@
   --ink: #ffffff;
   --muted: #ffffff;
   --line: #353535;
-  --lime: #ff0033;
-  --orange: #ff0033;
+  --lime: #e60000;
+  --orange: #e60000;
   --display: "Barlow Condensed", Impact, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
 }
@@ -157,7 +157,7 @@ button:focus-visible {
   height: 8px;
   border-radius: 50%;
   background: var(--orange);
-  box-shadow: 0 0 0 4px rgba(255, 0, 51, 0.2);
+  box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.2);
 }
 
 h1,
@@ -1171,8 +1171,8 @@ p {
 }
 
 :root {
-  --lime: #ff0033;
-  --orange: #ff0033;
+  --lime: #e60000;
+  --orange: #e60000;
   --line: #454545;
 }
 
