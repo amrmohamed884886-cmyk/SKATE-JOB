@@ -1,11 +1,11 @@
 :root {
   color-scheme: dark;
-  --paper: #050505;
+  --paper: #000000;
   --ink: #ffffff;
   --muted: #ffffff;
   --line: #353535;
-  --lime: #ed2929;
-  --orange: #ed2929;
+  --lime: #ff0033;
+  --orange: #ff0033;
   --display: "Barlow Condensed", Impact, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
 }
@@ -157,7 +157,7 @@ button:focus-visible {
   height: 8px;
   border-radius: 50%;
   background: var(--orange);
-  box-shadow: 0 0 0 4px rgba(237, 41, 41, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 0, 51, 0.2);
 }
 
 h1,
@@ -1104,7 +1104,7 @@ p {
 
   .motion-ready .service-card.is-visible:hover {
     transform: translateY(-8px);
-    border-color: #8c8c8c;
+    border-color: var(--orange);
   }
 
   .service-icon svg {
@@ -1159,8 +1159,8 @@ p {
 }
 
 :root {
-  --lime: #ffffff;
-  --orange: #ffffff;
+  --lime: #ff0033;
+  --orange: #ff0033;
   --line: #454545;
 }
 
@@ -1176,9 +1176,9 @@ p {
 .wordmark {
   position: absolute;
   top: 22px;
-  left: 50%;
+  left: 7.2%;
   display: block;
-  transform: translateX(-50%);
+  transform: none;
   pointer-events: auto;
 }
 
@@ -1445,6 +1445,10 @@ p {
     height: 100svh;
   }
 
+  .site-header .wordmark {
+    left: 20px;
+  }
+
   .brand-logo {
     width: 82px;
     height: 82px;
@@ -1521,6 +1525,17 @@ p {
   transform: none;
 }
 
+.footer-connect-link {
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+  transition: color 250ms ease;
+}
+
+.footer-connect-link:hover {
+  color: var(--orange);
+}
+
 .services {
   padding-top: clamp(78px, 9vw, 132px);
   padding-bottom: clamp(82px, 9vw, 132px);
@@ -1563,7 +1578,7 @@ p {
 
 .site-navigation > a:not(.nav-contact),
 .site-navigation .nav-contact {
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(var(--orange), var(--orange));
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: 0% 1px;
@@ -1641,6 +1656,55 @@ p {
   display: inline-block;
 }
 
+.hero h1 .hero-title-line:nth-child(2) > span {
+  color: var(--orange);
+}
+
+.ticker-star,
+.service-card-top span:last-child,
+.service-icon-promo,
+.service-icon-spark,
+.service-icon-skate,
+.text-link span {
+  color: var(--orange);
+}
+
+.about-copy .eyebrow,
+.about h2 span {
+  color: var(--orange);
+}
+
+.button-dark,
+.button-light {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: #ffffff;
+}
+
+.button-dark:hover,
+.button-light:hover {
+  border-color: var(--orange);
+  background: transparent;
+  color: var(--orange);
+}
+
+.whatsapp-link {
+  border-color: var(--orange);
+}
+
+.whatsapp-link:hover {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: #ffffff;
+}
+
+.instagram-link:hover,
+.developer-credit a:hover,
+.contact-phone:hover,
+.hero-socials a:hover {
+  color: var(--orange);
+}
+
 .site-footer .footer-wordmark {
   transform: none;
 }
@@ -1712,5 +1776,34 @@ p {
 
   .service-card h3 {
     font-size: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready .motion-reveal,
+  .motion-ready .site-navigation > a,
+  .motion-ready .hero-socials > a,
+  .motion-ready .hero-title-line > span {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .motion-ready .wordmark {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .motion-ready .hero-visual {
+    clip-path: none !important;
+    animation: none !important;
+  }
+
+  .motion-ready .hero-photo {
+    transform: none !important;
+    animation: none !important;
   }
 }

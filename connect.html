@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Connect with Skate Job on Instagram, WhatsApp, or visit our website."
@@ -15,15 +15,17 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="transitions.css" />
+    <script src="script.js" defer></script>
     <style>
       :root {
         color-scheme: dark;
-        --paper: #050505;
+        --paper: #000000;
         --ink: #ffffff;
         --muted: #ffffff;
         --line: #353535;
-        --lime: #ed2929;
-        --orange: #ed2929;
+        --lime: #ff0033;
+        --orange: #ff0033;
         --display: "Barlow Condensed", Impact, sans-serif;
         --body: "DM Sans", Arial, sans-serif;
       }
@@ -39,7 +41,7 @@
         display: grid;
         place-items: center;
         background:
-          radial-gradient(circle at 88% 12%, rgba(237, 41, 41, 0.16), transparent 18rem),
+          radial-gradient(circle at 88% 12%, rgba(255, 0, 51, 0.16), transparent 18rem),
           var(--paper);
         color: var(--ink);
         font-family: var(--body);
@@ -63,7 +65,7 @@
         border: 1px solid var(--ink);
         border-radius: 26px;
         background: #111111;
-        box-shadow: 9px 9px 0 #ed2929;
+        box-shadow: 9px 9px 0 #ff0033;
       }
 
       .brand {
@@ -81,7 +83,7 @@
         display: block;
         border: 1px solid var(--line);
         border-radius: 13px;
-        background: #050505;
+        background: #000000;
         object-fit: cover;
       }
 
@@ -314,8 +316,9 @@
     </style>
   </head>
   <body>
+    <div class="page-transition" aria-hidden="true"></div>
     <main class="connect-card">
-      <a class="brand" href="https://skate-job.vercel.app/" aria-label="Skate Job website">
+      <a class="brand" href="index.html" aria-label="Skate Job website">
         <img class="brand-mark" src="brand-logo.jpe" alt="Skate Job logo" />
         <span>SKATE<span style="color: var(--orange)">.</span>JOB</span>
       </a>
@@ -353,7 +356,7 @@
           <span class="arrow" aria-hidden="true">↗</span>
         </a>
 
-        <a class="link-card" href="https://skate-job.vercel.app/">
+        <a class="link-card" href="index.html">
           <span class="link-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
