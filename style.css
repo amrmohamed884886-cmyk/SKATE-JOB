@@ -737,8 +737,16 @@ p {
 .developer-credit a {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   color: var(--ink);
+  font-weight: 700;
+}
+
+.developer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
 }
 
 .developer-credit a:hover {
@@ -746,8 +754,8 @@ p {
 }
 
 .developer-credit svg {
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   flex: 0 0 auto;
 }
 
@@ -1031,6 +1039,10 @@ p {
 
   .site-footer > span {
     font-size: 8px;
+  }
+
+  .site-footer .developer-credit {
+    font-size: 9px;
   }
 }
 
