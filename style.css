@@ -1204,6 +1204,32 @@ p {
   filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.55));
 }
 
+.header-developer-credit {
+  position: absolute;
+  top: 61px;
+  left: calc(7.2% + 108px);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
+  transition: color 200ms ease;
+}
+
+.header-developer-credit:hover {
+  color: var(--orange);
+}
+
+.header-developer-credit svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
 .site-header .site-navigation {
   position: absolute;
   top: 38%;
@@ -1459,6 +1485,18 @@ p {
 
   .site-header .wordmark {
     left: 20px;
+  }
+
+  .site-header .header-developer-credit {
+    top: 55px;
+    left: 112px;
+    gap: 4px;
+    font-size: 9px;
+  }
+
+  .header-developer-credit svg {
+    width: 13px;
+    height: 13px;
   }
 
   .brand-logo {
@@ -1724,12 +1762,12 @@ p {
 @keyframes brand-arrive {
   from {
     opacity: 0;
-    transform: translate(-50%, -15px);
+    transform: translateY(-15px);
   }
 
   to {
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
 }
 
